@@ -20,11 +20,11 @@ export class HeroesService {
   }
 
   actualizarHeroe(heroe: Heroe) {
-    const heroeTemp = {
+    /*  const heroeTemp = {
       ...heroe,
     };
 
-    delete heroeTemp.id;
+    delete heroeTemp.id; */
 
     return this.http.put(`${this.url}/heroes/${heroe.id}.json`, heroe);
   }
