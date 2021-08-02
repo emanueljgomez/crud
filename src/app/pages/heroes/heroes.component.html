@@ -15,8 +15,8 @@
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Poder</th>
-      <th scope="col">Vivo</th>
-      <th scope="col">Tools</th>
+      <th scope="col">Estado</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
 
@@ -29,7 +29,14 @@
         <label *ngIf="heroe.vivo" class="badge bg-success">Vivo</label>
         <label *ngIf="!heroe.vivo" class="badge bg-danger">Muerto</label>
       </td>
-      <td></td>
+      <td>
+        <button class="btn btn-primary" [routerLink]="['/heroe', heroe.id]">
+          <i class="fa fa-pen"></i>
+        </button>
+        <button class="btn btn-danger ms-1">
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>
